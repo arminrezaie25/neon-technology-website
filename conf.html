@@ -1,0 +1,2475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How Technology Has Changed Our Daily Lives — NEON Educational Guide</title>
+<meta name="description" content="An illustrated educational article and 8-minute presentation guide about how the Internet, computers and smart devices, and artificial intelligence changed everyday life. Designed and developed by NEON.">
+<meta name="author" content="NEON">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0a1e33">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="How Technology Has Changed Our Daily Lives">
+<meta property="og:description" content="How the Internet, computers and smart devices, and artificial intelligence changed an ordinary day — an educational article with an 8-minute speaking script.">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a1e33'/%3E%3Ccircle cx='16' cy='16' r='7.5' fill='none' stroke='%2338bdf8' stroke-width='2.4'/%3E%3Cellipse cx='16' cy='16' rx='3.4' ry='7.5' fill='none' stroke='%2338bdf8' stroke-width='1.4' opacity='.7'/%3E%3C/svg%3E">
+
+<style>
+/* =========================================================
+   NEON — VERSION 2 (presentation-fitting fix)
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. DESIGN TOKENS
+   --------------------------------------------------------- */
+:root{
+  --navy-950:#061423;
+  --navy-900:#0a1e33;
+  --navy-800:#102c48;
+  --navy-700:#1a3d5f;
+  --ink:#14263a;
+  --ink-2:#4b5f76;
+  --ink-3:#6d7f93;
+  --line:#dbe4ee;
+  --line-soft:#eaf0f7;
+  --bg:#f6f9fc;
+  --surface:#ffffff;
+  --surface-2:#fbfdff;
+  --accent:#0f6fd1;
+  --accent-dark:#0a539e;
+  --accent-light:#3b8ce0;
+  --accent-soft:#e6f1fc;
+  --accent-2:#0d9dbb;
+  --note:#fff6e6;
+  --note-line:#e6c18a;
+  --note-ink:#8a5a12;
+
+  --font-display:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+  --font-body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+
+  --fs-body:clamp(1.0625rem, 0.98rem + 0.3vw, 1.125rem);
+  --fs-small:0.875rem;
+  --fs-tiny:0.78rem;
+  --fs-lead:clamp(1.13rem, 1rem + 0.5vw, 1.27rem);
+
+  --measure:66ch;
+  --measure-tight:60ch;
+  --container:1160px;
+  --header-offset:120px;
+
+  --r-sm:8px;
+  --r-md:12px;
+  --r-lg:18px;
+  --r-xl:24px;
+
+  --shadow-xs:0 1px 2px rgba(10,30,51,.05);
+  --shadow-sm:0 1px 2px rgba(10,30,51,.06), 0 3px 10px rgba(10,30,51,.05);
+  --shadow-md:0 10px 30px rgba(10,30,51,.09);
+  --shadow-lg:0 24px 60px rgba(10,30,51,.16);
+}
+
+@media (min-width:900px){
+  :root{ --header-offset:96px; }
+}
+
+/* ---------------------------------------------------------
+   2. BASE
+   --------------------------------------------------------- */
+*,*::before,*::after{ box-sizing:border-box; }
+
+html{
+  scroll-behavior:smooth;
+  /* Top offset for the sticky header — applies to anchor navigation
+     and to scrollIntoView when the browser uses it. */
+  scroll-padding-top:var(--header-offset);
+  /* Bottom offset only matters in presentation mode (set below). */
+  scroll-padding-bottom:0;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+
+/* Presentation mode: reserve room for the fixed bottom control bar
+   so anchors, scrollIntoView, and programmatic scroll all respect it. */
+html.is-presenting{
+  scroll-padding-bottom:160px;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:var(--fs-body);
+  line-height:1.72;
+  font-feature-settings:"kern" 1,"liga" 1;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-wrap:break-word;
+  min-height:100vh;
+}
+
+img,svg{ max-width:100%; }
+svg{ height:auto; display:block; }
+
+h1,h2,h3{
+  font-family:var(--font-display);
+  font-weight:700;
+  line-height:1.18;
+  letter-spacing:-.012em;
+  color:var(--navy-800);
+  margin:0 0 .55em;
+  text-wrap:balance;
+}
+h1{ font-size:clamp(2rem, 1.35rem + 2.9vw, 3.15rem); }
+h2{ font-size:clamp(1.5rem, 1.15rem + 1.55vw, 2.15rem); }
+h3{
+  font-family:var(--font-body);
+  font-weight:700;
+  font-size:1.04rem;
+  letter-spacing:0;
+  line-height:1.35;
+  color:var(--navy-800);
+}
+
+p{ margin:0 0 1.05em; }
+ul,ol{ margin:0 0 1.05em; padding-left:1.3em; }
+li{ margin-bottom:.42em; }
+li:last-child{ margin-bottom:0; }
+
+a{
+  color:var(--accent-dark);
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+  text-decoration-color:rgba(15,111,209,.4);
+  transition:color .15s ease, text-decoration-color .15s ease;
+}
+a:hover{
+  color:var(--accent);
+  text-decoration-color:currentColor;
+}
+
+strong{ color:var(--navy-800); }
+
+:focus-visible{
+  outline:3px solid var(--accent);
+  outline-offset:3px;
+  border-radius:6px;
+}
+:focus:not(:focus-visible){ outline:none; }
+
+code{
+  font-family:var(--font-mono);
+  font-size:.86em;
+  background:var(--line-soft);
+  padding:.12em .4em;
+  border-radius:5px;
+  color:var(--navy-800);
+}
+
+kbd{
+  font-family:var(--font-mono);
+  font-size:.78em;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.28);
+  padding:.05em .4em;
+  border-radius:4px;
+  color:#e6f2fb;
+}
+
+[hidden]{ display:none !important; }
+
+/* ---------------------------------------------------------
+   3. UTILITIES
+   --------------------------------------------------------- */
+.container{
+  width:100%;
+  max-width:var(--container);
+  margin-inline:auto;
+  padding-inline:clamp(1rem, 4.5vw, 2rem);
+}
+
+.visually-hidden{
+  position:absolute !important;
+  width:1px; height:1px;
+  margin:-1px; padding:0;
+  overflow:hidden;
+  clip:rect(0 0 0 0);
+  clip-path:inset(50%);
+  white-space:nowrap;
+  border:0;
+}
+
+.skip-link{
+  position:absolute;
+  left:1rem;
+  top:-100px;
+  z-index:200;
+  background:var(--navy-800);
+  color:#fff;
+  padding:.7rem 1.1rem;
+  border-radius:0 0 var(--r-sm) var(--r-sm);
+  font-weight:700;
+  text-decoration:none;
+  transition:top .15s ease;
+}
+.skip-link:focus{ top:0; color:#fff; }
+
+/* ---------------------------------------------------------
+   4. HEADER
+   --------------------------------------------------------- */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:60;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(12px) saturate(1.2);
+  -webkit-backdrop-filter:blur(12px) saturate(1.2);
+  border-bottom:1px solid var(--line);
+}
+
+.site-header__inner{
+  max-width:var(--container);
+  margin-inline:auto;
+  padding:.5rem clamp(1rem, 4.5vw, 2rem);
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:.4rem .9rem;
+}
+
+.brand{
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+  font-weight:700;
+  font-size:.95rem;
+  color:var(--navy-800);
+  text-decoration:none;
+  flex:1 1 auto;
+  min-width:0;
+  letter-spacing:.005em;
+}
+.brand:hover{ color:var(--accent-dark); }
+.brand svg{ flex:0 0 auto; width:26px; height:26px; }
+.brand span{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+.site-nav{
+  order:3;
+  flex:1 1 100%;
+  overflow-x:auto;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  border-top:1px solid var(--line-soft);
+  margin-inline:calc(-1 * clamp(1rem, 4.5vw, 2rem));
+  padding-inline:clamp(1rem, 4.5vw, 2rem);
+}
+.site-nav::-webkit-scrollbar{ display:none; }
+
+.site-nav ul{
+  display:flex;
+  gap:.12rem;
+  margin:0;
+  padding:.3rem 0 .4rem;
+  list-style:none;
+}
+.site-nav li{ margin:0; }
+
+.site-nav a{
+  display:block;
+  padding:.5rem .75rem;
+  border-radius:99px;
+  font-size:.86rem;
+  font-weight:600;
+  color:var(--ink-2);
+  text-decoration:none;
+  white-space:nowrap;
+  transition:background-color .15s ease, color .15s ease;
+}
+.site-nav a:hover{
+  background:var(--accent-soft);
+  color:var(--accent-dark);
+  text-decoration:none;
+}
+.site-nav a.is-active{
+  background:var(--navy-800);
+  color:#fff;
+}
+
+.site-header__actions{
+  flex:0 0 auto;
+  margin-left:auto;
+  display:flex;
+  gap:.4rem;
+}
+
+@media (min-width:900px){
+  .site-header__inner{ flex-wrap:nowrap; padding-block:.6rem; }
+  .brand{ flex:0 0 auto; }
+  .site-nav{
+    order:2;
+    flex:1 1 auto;
+    overflow:visible;
+    border-top:0;
+    margin-inline:0;
+    padding-inline:0;
+    display:flex;
+    justify-content:flex-end;
+  }
+  .site-nav ul{ padding:0; }
+  .site-header__actions{ order:3; margin-left:.5rem; }
+}
+
+/* ---------------------------------------------------------
+   5. BUTTONS
+   --------------------------------------------------------- */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.5rem;
+  font:inherit;
+  font-size:.87rem;
+  font-weight:700;
+  line-height:1;
+  padding:.72rem 1.05rem;
+  border-radius:99px;
+  border:1px solid transparent;
+  cursor:pointer;
+  text-decoration:none;
+  white-space:nowrap;
+  min-height:40px;
+  transition:background-color .15s ease, border-color .15s ease,
+             color .15s ease, transform .08s ease, box-shadow .15s ease;
+}
+.btn svg{ flex:0 0 auto; }
+.btn:active:not(:disabled){ transform:translateY(1px); }
+
+.btn--primary{
+  background:var(--accent);
+  color:#fff;
+  box-shadow:0 6px 18px rgba(15,111,209,.28);
+}
+.btn--primary:hover{
+  background:var(--accent-dark);
+  color:#fff;
+  box-shadow:0 8px 22px rgba(15,111,209,.34);
+}
+
+.btn--ghost{
+  background:#fff;
+  border-color:var(--line);
+  color:var(--navy-800);
+}
+.btn--ghost:hover{
+  border-color:var(--accent);
+  color:var(--accent-dark);
+  background:var(--accent-soft);
+}
+
+.btn--on-light{
+  background:rgba(255,255,255,.12);
+  border-color:rgba(255,255,255,.45);
+  color:#fff;
+}
+.btn--on-light:hover{
+  background:rgba(255,255,255,.22);
+  color:#fff;
+}
+
+.btn[aria-pressed="true"]{
+  background:var(--navy-800);
+  border-color:var(--navy-800);
+  color:#fff;
+}
+.btn[aria-pressed="true"]:hover{
+  background:var(--navy-900);
+  color:#fff;
+}
+
+.btn:disabled,
+.btn[disabled]{
+  opacity:.42;
+  cursor:not-allowed;
+}
+
+/* ---------------------------------------------------------
+   6. PROGRESS BAR
+   --------------------------------------------------------- */
+.progress{
+  position:absolute;
+  left:0; right:0; bottom:-1px;
+  height:3px;
+  background:transparent;
+  overflow:hidden;
+}
+.progress__bar{
+  display:block;
+  width:100%;
+  height:100%;
+  transform:scaleX(0);
+  transform-origin:left center;
+  background:linear-gradient(90deg, var(--accent), var(--accent-2));
+  will-change:transform;
+}
+
+/* ---------------------------------------------------------
+   7. HERO
+   --------------------------------------------------------- */
+.hero{
+  position:relative;
+  background:
+    radial-gradient(1100px 460px at 82% -12%, rgba(56,189,248,.22), transparent 62%),
+    linear-gradient(160deg, var(--navy-950), var(--navy-700) 74%);
+  color:#eaf3fb;
+  overflow:hidden;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:radial-gradient(rgba(255,255,255,.085) 1px, transparent 1px);
+  background-size:26px 26px;
+  opacity:.5;
+  pointer-events:none;
+}
+
+.hero__inner{
+  position:relative;
+  z-index:1;
+  display:grid;
+  gap:clamp(1.75rem, 4vw, 3rem);
+  align-items:center;
+  padding-block:clamp(2.25rem, 6vw, 4rem);
+}
+
+@media (min-width:920px){
+  .hero__inner{ grid-template-columns:1.05fr .95fr; }
+}
+
+.hero__eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+  font-size:.74rem;
+  font-weight:700;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:#8fd4f5;
+  margin:0 0 1rem;
+}
+.hero__eyebrow::before{
+  content:"";
+  width:26px; height:2px;
+  background:#38bdf8;
+  border-radius:2px;
+}
+
+.hero h1{
+  color:#fff;
+  margin-bottom:.5em;
+}
+
+.hero__subtitle{
+  font-size:var(--fs-lead);
+  color:#c8dcee;
+  max-width:52ch;
+  margin-bottom:1.4rem;
+}
+
+.hero__meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.45rem;
+  list-style:none;
+  padding:0;
+  margin:0 0 1.6rem;
+}
+.hero__meta li{
+  margin:0;
+  font-size:.78rem;
+  font-weight:600;
+  padding:.38rem .82rem;
+  border-radius:99px;
+  border:1px solid rgba(143,212,245,.35);
+  background:rgba(143,212,245,.09);
+  color:#bfe2f6;
+}
+
+.hero__actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.7rem;
+}
+
+.hero__art{
+  display:block;
+  width:100%;
+  border-radius:var(--r-xl);
+  box-shadow:var(--shadow-lg);
+}
+
+/* ---------------------------------------------------------
+   8. SECTIONS
+   --------------------------------------------------------- */
+.section{
+  padding-block:clamp(3rem, 7vw, 5.25rem);
+  border-top:1px solid var(--line-soft);
+  /* `scroll-margin-top` is kept so anchor navigation and any native
+     scrollIntoView honour the sticky header. */
+  scroll-margin-top:var(--header-offset);
+}
+.section--tint{ background:var(--surface); }
+
+.section__head{
+  max-width:var(--measure);
+  margin-bottom:clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.eyebrow{
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  flex-wrap:wrap;
+  margin:0 0 .7rem;
+  font-size:.76rem;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
+.eyebrow__num{
+  display:inline-grid;
+  place-items:center;
+  min-width:1.9rem;
+  height:1.9rem;
+  padding-inline:.4rem;
+  border-radius:8px;
+  background:var(--accent-soft);
+  color:var(--accent-dark);
+  font-size:.8rem;
+  letter-spacing:0;
+  font-weight:800;
+}
+
+.duration{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  margin:0;
+  font-size:.8rem;
+  font-weight:600;
+  color:var(--ink-2);
+  background:var(--line-soft);
+  border-radius:99px;
+  padding:.35rem .85rem;
+}
+.duration svg{ width:14px; height:14px; }
+
+.now-badge{
+  display:none;
+  align-items:center;
+  gap:.4rem;
+  margin-left:.4rem;
+  font-size:.7rem;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:#fff;
+  background:var(--accent);
+  border-radius:99px;
+  padding:.34rem .7rem;
+  vertical-align:middle;
+}
+.now-badge::before{
+  content:"";
+  width:6px; height:6px;
+  border-radius:50%;
+  background:#fff;
+  box-shadow:0 0 0 3px rgba(255,255,255,.28);
+}
+body.is-presenting .section.is-current .now-badge{ display:inline-flex; }
+
+.section__body{
+  display:grid;
+  gap:clamp(1.6rem, 4vw, 3rem);
+  align-items:start;
+}
+@media (min-width:920px){
+  .section__body--split{ grid-template-columns:1.08fr .92fr; }
+  .section__body--split .figure{ margin-top:.35rem; }
+}
+
+.prose{ max-width:var(--measure); }
+.prose > p:last-child{ margin-bottom:0; }
+
+.lead{
+  font-size:var(--fs-lead);
+  line-height:1.6;
+  color:var(--ink-2);
+  max-width:var(--measure);
+  margin-bottom:1.2rem;
+}
+
+/* ---------------------------------------------------------
+   9. COMPONENTS
+   --------------------------------------------------------- */
+
+.keypoints{
+  max-width:var(--measure);
+  margin:1.75rem 0 0;
+  padding:1.15rem 1.3rem;
+  background:var(--accent-soft);
+  border-left:4px solid var(--accent);
+  border-radius:0 var(--r-md) var(--r-md) 0;
+}
+.keypoints__title{
+  margin:0 0 .65rem;
+  font-size:.74rem;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--accent-dark);
+}
+.keypoints ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.keypoints li{
+  position:relative;
+  padding-left:1.45rem;
+  font-size:.96rem;
+  color:var(--navy-700);
+  margin-bottom:.42rem;
+}
+.keypoints li:last-child{ margin-bottom:0; }
+.keypoints li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.62em;
+  width:7px; height:7px;
+  border-radius:50%;
+  background:var(--accent);
+}
+
+.callout{
+  max-width:var(--measure);
+  margin:1.5rem 0;
+  padding:1.05rem 1.25rem;
+  border-radius:var(--r-md);
+  background:var(--surface);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow-xs);
+}
+.callout--note{
+  background:var(--note);
+  border-color:var(--note-line);
+}
+.callout__label{
+  margin:0 0 .35rem;
+  font-size:.74rem;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--accent-dark);
+}
+.callout--note .callout__label{ color:var(--note-ink); }
+.callout__text{ margin:0; font-size:.98rem; }
+.callout__text + .callout__text{ margin-top:.6rem; }
+
+.grid{
+  display:grid;
+  gap:1rem;
+  margin:1.75rem 0;
+  grid-template-columns:repeat(auto-fit, minmax(min(100%, 235px), 1fr));
+}
+
+.card{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:var(--r-md);
+  padding:1.2rem 1.25rem;
+  box-shadow:var(--shadow-xs);
+  transition:border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.card:hover{
+  border-color:#bcd6ef;
+  box-shadow:var(--shadow-md);
+  transform:translateY(-2px);
+}
+.card__icon{
+  display:grid;
+  place-items:center;
+  width:42px; height:42px;
+  border-radius:11px;
+  background:var(--accent-soft);
+  color:var(--accent-dark);
+  margin-bottom:.85rem;
+}
+.card__icon svg{ width:22px; height:22px; }
+.card h3{ margin-bottom:.4rem; }
+.card p{ margin:0; font-size:.94rem; color:var(--ink-2); line-height:1.65; }
+
+.figure{
+  margin:0;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  padding:.7rem;
+  box-shadow:var(--shadow-sm);
+}
+.figure svg{ width:100%; border-radius:var(--r-md); }
+.figure figcaption{
+  font-size:.84rem;
+  color:var(--ink-2);
+  padding:.75rem .5rem .25rem;
+  line-height:1.55;
+}
+
+.script{
+  max-width:var(--measure);
+  margin:1.75rem 0 0;
+  border:1px solid var(--line);
+  border-radius:var(--r-md);
+  background:var(--surface);
+  overflow:hidden;
+}
+.script > summary{
+  display:flex;
+  align-items:center;
+  gap:.7rem;
+  padding:.9rem 1.15rem;
+  cursor:pointer;
+  font-size:.92rem;
+  font-weight:700;
+  color:var(--navy-800);
+  list-style:none;
+  user-select:none;
+  transition:background-color .15s ease;
+}
+.script > summary::-webkit-details-marker{ display:none; }
+.script > summary:hover{ background:var(--accent-soft); }
+.script > summary:focus-visible{
+  outline:3px solid var(--accent);
+  outline-offset:-3px;
+}
+.script__marker{
+  flex:0 0 auto;
+  width:0; height:0;
+  border-left:7px solid var(--accent);
+  border-top:5px solid transparent;
+  border-bottom:5px solid transparent;
+  transition:transform .18s ease;
+}
+.script[open] .script__marker{ transform:rotate(90deg); }
+.script__meta{
+  font-weight:700;
+  font-size:.76rem;
+  color:var(--ink-2);
+  background:var(--line-soft);
+  border-radius:99px;
+  padding:.15rem .62rem;
+  margin-left:auto;
+}
+.script__body{
+  padding:.25rem 1.15rem 1.15rem;
+  border-top:1px solid var(--line-soft);
+}
+.script__body p{
+  font-size:1rem;
+  line-height:1.78;
+  color:var(--navy-700);
+  margin:1rem 0 0;
+}
+.script__body p:last-child{ margin-bottom:.2rem; }
+
+.summary-grid{
+  display:grid;
+  gap:1rem;
+  margin:1.5rem 0 2rem;
+  grid-template-columns:repeat(auto-fit, minmax(min(100%, 235px), 1fr));
+}
+.summary-card{
+  background:linear-gradient(150deg, var(--navy-800), var(--navy-700));
+  color:#dcebf8;
+  border-radius:var(--r-md);
+  padding:1.3rem 1.35rem;
+  box-shadow:var(--shadow-sm);
+}
+.summary-card h3{
+  color:#fff;
+  font-size:1rem;
+  margin-bottom:.45rem;
+}
+.summary-card p{
+  margin:0;
+  font-size:.92rem;
+  color:#b9d3e8;
+  line-height:1.65;
+}
+
+.closing-quote{
+  max-width:var(--measure);
+  margin:0 0 1.5rem;
+  padding:1.4rem 1.55rem;
+  border-left:4px solid var(--accent-2);
+  background:var(--accent-soft);
+  border-radius:0 var(--r-md) var(--r-md) 0;
+  font-family:var(--font-display);
+  font-size:clamp(1.1rem, 1rem + .5vw, 1.3rem);
+  line-height:1.55;
+  color:var(--navy-800);
+  letter-spacing:-.005em;
+}
+.closing-quote p{ margin:0; }
+
+/* ---------------------------------------------------------
+   10. FOOTER
+   --------------------------------------------------------- */
+.site-footer{
+  background:var(--navy-950);
+  color:#a8c2d8;
+  padding-block:clamp(2.4rem, 5vw, 3.4rem);
+  font-size:.88rem;
+}
+.site-footer__grid{
+  display:grid;
+  gap:1.75rem;
+  grid-template-columns:1fr;
+}
+@media (min-width:760px){
+  .site-footer__grid{ grid-template-columns:1.25fr .75fr; }
+}
+.site-footer__title{
+  font-family:var(--font-display);
+  font-size:1.15rem;
+  color:#fff;
+  margin:0 0 .5rem;
+  font-weight:700;
+}
+.site-footer p{ margin:0 0 .55rem; }
+.site-footer p:last-child{ margin-bottom:0; }
+.site-footer code{
+  background:rgba(255,255,255,.1);
+  color:#d8ecfb;
+}
+.credit{
+  color:#8fd4f5;
+  font-weight:700;
+  letter-spacing:.01em;
+}
+
+/* ---------------------------------------------------------
+   11. PRESENTATION MODE
+   --------------------------------------------------------- */
+body.is-presenting{
+  --fs-body:clamp(1.2rem, 1.1rem + .45vw, 1.32rem);
+  --fs-lead:clamp(1.3rem, 1.15rem + .6vw, 1.45rem);
+  /* Reserve room for the fixed bottom bar so the very last content of
+     the last section is never covered. 160px is comfortably larger
+     than the bar (≈60–70px) and accounts for safe-area insets. */
+  padding-bottom:160px;
+}
+
+body.is-presenting .hero__meta{ display:none; }
+body.is-presenting .card:hover{ transform:none; box-shadow:var(--shadow-xs); }
+body.is-presenting .section{ padding-block:clamp(2.75rem, 6vw, 4.5rem); }
+body.is-presenting .section:not(.is-current){ opacity:.94; }
+
+body.is-presenting .section.is-current .section__head h2{
+  color:var(--accent-dark);
+}
+body.is-presenting .section.is-current{
+  box-shadow:inset 4px 0 0 var(--accent);
+}
+
+.present-bar{
+  position:fixed;
+  left:0; right:0; bottom:0;
+  z-index:80;
+  background:rgba(6,20,35,.96);
+  backdrop-filter:blur(10px) saturate(1.1);
+  -webkit-backdrop-filter:blur(10px) saturate(1.1);
+  border-top:1px solid rgba(143,212,245,.28);
+  color:#e6f2fb;
+  padding:.6rem clamp(.7rem, 3vw, 1.4rem);
+  padding-bottom:calc(.6rem + env(safe-area-inset-bottom, 0px));
+  padding-left:calc(.7rem + env(safe-area-inset-left, 0px));
+  padding-right:calc(.7rem + env(safe-area-inset-right, 0px));
+  box-shadow:0 -10px 30px rgba(0,0,0,.28);
+}
+
+.present-bar__inner{
+  max-width:var(--container);
+  margin-inline:auto;
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+}
+
+.present-bar__nav{
+  display:flex;
+  align-items:center;
+  gap:.4rem;
+  flex:0 0 auto;
+}
+
+.present-bar__status{
+  flex:1 1 auto;
+  min-width:0;
+  text-align:center;
+  line-height:1.3;
+  padding:0 .35rem;
+}
+.present-bar__count{
+  display:block;
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:#8fd4f5;
+}
+.present-bar__name{
+  display:block;
+  font-size:.98rem;
+  font-weight:700;
+  color:#fff;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.present-bar__hint{
+  display:none;
+  font-size:.72rem;
+  color:#9ab6cd;
+  margin-top:.15rem;
+}
+@media (min-width:680px){
+  .present-bar__hint{ display:block; }
+}
+
+.present-dots{
+  display:none;
+  gap:.35rem;
+  justify-content:center;
+  margin-top:.35rem;
+}
+@media (min-width:480px){
+  .present-dots{ display:flex; }
+}
+.present-dots__dot{
+  width:7px; height:7px;
+  border-radius:50%;
+  background:rgba(255,255,255,.22);
+  border:0;
+  padding:0;
+  cursor:pointer;
+  transition:background-color .15s ease, transform .15s ease;
+}
+.present-dots__dot:hover{ background:rgba(255,255,255,.45); }
+.present-dots__dot.is-active{
+  background:#38bdf8;
+  transform:scale(1.35);
+}
+.present-dots__dot:focus-visible{
+  outline:2px solid #38bdf8;
+  outline-offset:3px;
+}
+
+.present-bar .btn{
+  background:rgba(255,255,255,.1);
+  border-color:rgba(255,255,255,.3);
+  color:#fff;
+  font-size:.84rem;
+  padding:.62rem .95rem;
+  min-height:38px;
+}
+.present-bar .btn:hover:not(:disabled){
+  background:rgba(255,255,255,.2);
+  border-color:rgba(255,255,255,.5);
+}
+.present-bar .btn:disabled{
+  opacity:.32;
+  cursor:not-allowed;
+}
+.present-bar .btn svg{ width:14px; height:14px; }
+.present-bar__btn-text{ display:none; }
+@media (min-width:560px){
+  .present-bar__btn-text{ display:inline; }
+}
+
+.present-bar__icon-btn{
+  padding:.55rem .7rem;
+  min-width:38px;
+}
+.present-bar__icon-btn .present-bar__btn-text{ display:none !important; }
+
+@media (max-width:420px){
+  .present-bar__inner{ gap:.35rem; }
+  .present-bar__status{ padding:0 .2rem; }
+  .present-bar__name{ font-size:.88rem; }
+  .present-bar__count{ font-size:.66rem; }
+  .present-bar .btn{ padding:.55rem .7rem; min-height:36px; }
+}
+
+/* ---------------------------------------------------------
+   12. REDUCED MOTION
+   --------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *,*::before,*::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+    scroll-behavior:auto !important;
+  }
+  .card:hover{ transform:none; }
+  .script[open] .script__marker{ transition:none; }
+}
+
+/* ---------------------------------------------------------
+   13. PRINT
+   --------------------------------------------------------- */
+@media print{
+  .site-header,
+  .present-bar,
+  .hero__actions,
+  .skip-link,
+  .progress{ display:none !important; }
+  body{ background:#fff; font-size:11pt; padding-bottom:0 !important; }
+  .hero{ background:#fff; color:#000; }
+  .hero h1,
+  .hero__subtitle,
+  .hero__eyebrow,
+  .hero__meta li{ color:#000; background:none; border-color:#999; }
+  .hero__art{ display:none; }
+  .section{
+    break-inside:avoid;
+    page-break-inside:avoid;
+    padding-block:1.5rem;
+    box-shadow:none !important;
+  }
+  .script{ border:1px solid #ccc; }
+  .script > summary{ display:none; }
+  .script__body{ border-top:0; }
+  a[href^="#"]{ text-decoration:none; color:#000; }
+  .card,
+  .callout,
+  .figure{ box-shadow:none; }
+}
+</style>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+<header class="site-header" id="top">
+  <div class="site-header__inner">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <circle cx="16" cy="16" r="13" fill="none" stroke="#0f6fd1" stroke-width="2"/>
+        <ellipse cx="16" cy="16" rx="5.5" ry="13" fill="none" stroke="#0d9dbb" stroke-width="1.5"/>
+        <path d="M3 16h26" stroke="#0d9dbb" stroke-width="1.5"/>
+      </svg>
+      <span>Technology &amp; Daily Life</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Article sections">
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#internet">The Internet</a></li>
+        <li><a href="#devices">Computers &amp; Devices</a></li>
+        <li><a href="#ai">Artificial Intelligence</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <button type="button" class="btn btn--ghost" data-present-toggle aria-pressed="false">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <rect x="2" y="4" width="20" height="13" rx="2"/>
+          <path d="M8 21h8M12 17v4"/>
+        </svg>
+        <span class="present-btn__label">Presentation mode</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="progress" aria-hidden="true">
+    <span class="progress__bar" id="progressBar"></span>
+  </div>
+</header>
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+<section class="hero">
+  <div class="container hero__inner">
+    <div>
+      <p class="hero__eyebrow">English Class Presentation</p>
+      <h1>How Technology Has Changed Our Daily Lives</h1>
+      <p class="hero__subtitle">
+        An illustrated guide to three technologies that quietly reshaped an ordinary day:
+        the Internet, computers and smart devices, and artificial intelligence.
+      </p>
+
+      <ul class="hero__meta">
+        <li>8-minute presentation</li>
+        <li>5 sections</li>
+        <li>Everyday English (B1)</li>
+        <li>Includes speaking script</li>
+      </ul>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#introduction">
+          Start reading
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M12 5v14M6 13l6 6 6-6"/>
+          </svg>
+        </a>
+        <button type="button" class="btn btn--on-light" data-present-toggle aria-pressed="false">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <rect x="2" y="4" width="20" height="13" rx="2"/>
+            <path d="M8 21h8M12 17v4"/>
+          </svg>
+          <span class="present-btn__label">Turn on presentation mode</span>
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <svg class="hero__art" viewBox="0 0 640 420" role="img"
+           aria-label="Illustration of a glowing globe connected by lines to four network nodes, representing worldwide digital communication."
+           xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="heroBg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#061423"/>
+            <stop offset="100%" stop-color="#1a3d5f"/>
+          </linearGradient>
+          <radialGradient id="heroGlobe" cx="50%" cy="42%" r="62%">
+            <stop offset="0%" stop-color="#38bdf8" stop-opacity=".40"/>
+            <stop offset="100%" stop-color="#0d9dbb" stop-opacity=".05"/>
+          </radialGradient>
+          <pattern id="heroDots" width="28" height="28" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.5" fill="#8ecdf5" opacity=".22"/>
+          </pattern>
+        </defs>
+
+        <rect width="640" height="420" rx="26" fill="url(#heroBg)"/>
+        <rect width="640" height="420" rx="26" fill="url(#heroDots)"/>
+
+        <g stroke="#38bdf8" stroke-width="1.5" opacity=".5" stroke-linecap="round">
+          <line x1="237" y1="152" x2="118" y2="84"/>
+          <line x1="409" y1="164" x2="534" y2="106"/>
+          <line x1="235" y1="244" x2="106" y2="318"/>
+          <line x1="406" y1="243" x2="540" y2="316"/>
+        </g>
+
+        <g transform="translate(320 200)">
+          <circle r="96" fill="url(#heroGlobe)" stroke="#7dd3fc" stroke-width="1.6"/>
+          <ellipse rx="96" ry="38" fill="none" stroke="#7dd3fc" stroke-width="1.2" opacity=".45"/>
+          <ellipse rx="38" ry="96" fill="none" stroke="#7dd3fc" stroke-width="1.2" opacity=".45"/>
+          <ellipse rx="72" ry="96" fill="none" stroke="#7dd3fc" stroke-width="1.1" opacity=".26"/>
+          <line x1="-96" y1="0" x2="96" y2="0" stroke="#7dd3fc" stroke-width="1.1" opacity=".4"/>
+          <circle r="7" fill="#e0f2fe"/>
+        </g>
+
+        <g>
+          <circle cx="118" cy="84" r="19" fill="#0d9dbb" opacity=".22"/>
+          <circle cx="118" cy="84" r="7.5" fill="#7dd3fc"/>
+
+          <circle cx="534" cy="106" r="15" fill="#0d9dbb" opacity=".22"/>
+          <circle cx="534" cy="106" r="6" fill="#7dd3fc"/>
+
+          <circle cx="106" cy="318" r="17" fill="#0d9dbb" opacity=".22"/>
+          <circle cx="106" cy="318" r="6.5" fill="#7dd3fc"/>
+
+          <circle cx="540" cy="316" r="20" fill="#0d9dbb" opacity=".22"/>
+          <circle cx="540" cy="316" r="8" fill="#7dd3fc"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     MAIN
+     ========================================================= -->
+<main id="main">
+
+  <!-- SECTION 1 — INTRODUCTION -->
+  <section class="section" id="introduction" data-title="Introduction" aria-labelledby="introduction-title">
+    <div class="container">
+      <header class="section__head">
+        <p class="eyebrow">
+          <span class="eyebrow__num">01</span> Introduction
+          <span class="now-badge">Now presenting</span>
+        </p>
+        <h2 id="introduction-title">Technology Is Everywhere</h2>
+        <p class="duration">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+          </svg>
+          About 1 minute
+        </p>
+      </header>
+
+      <div class="section__body">
+        <div class="prose">
+          <p class="lead">
+            Technology is the collection of tools, systems, and methods that people create
+            to solve problems and make daily tasks easier.
+          </p>
+
+          <p>
+            A pencil is technology. So is a bus timetable, a hospital scanner, and a satellite.
+            Most of us use technology many times a day, usually without noticing it. We only
+            stop to think about it when something stops working.
+          </p>
+
+          <p>
+            Over the last few decades, three areas of technology have changed ordinary life
+            more than almost anything else: the Internet, computing devices, and artificial
+            intelligence. This article looks at each one in turn and asks a simple question:
+            <strong>what actually changed in a normal day?</strong>
+          </p>
+
+          <div class="keypoints">
+            <p class="keypoints__title">Key points</p>
+            <ul>
+              <li>Technology = tools, systems, and methods that solve problems.</li>
+              <li>It shapes communication, learning, work, information, and problem-solving.</li>
+              <li>Three areas ahead: the Internet, devices, and AI.</li>
+            </ul>
+          </div>
+
+          <details class="script">
+            <summary>
+              <span class="script__marker" aria-hidden="true"></span>
+              <span>Speaking script</span>
+              <span class="script__meta">≈ 115 words · ~1 min</span>
+            </summary>
+            <div class="script__body">
+              <p>
+                Good morning, everyone. Today I want to talk about something we all use, but
+                rarely stop to think about: technology.
+              </p>
+              <p>
+                When I say technology, I do not only mean computers or robots. Technology is
+                any tool, system, or method that people create to solve a problem. A pencil is
+                technology. So is a bus timetable, and so is a satellite.
+              </p>
+              <p>
+                Technology has changed how we communicate, how we learn, how we work, and how
+                we find answers. In the next eight minutes, I will look at three areas: the
+                Internet, computers and smart devices, and artificial intelligence. For each
+                one, I will ask the same simple question: what actually changed in a normal day?
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 — THE INTERNET -->
+  <section class="section section--tint" id="internet" data-title="The Internet" aria-labelledby="internet-title">
+    <div class="container">
+      <header class="section__head">
+        <p class="eyebrow">
+          <span class="eyebrow__num">02</span> The Internet
+          <span class="now-badge">Now presenting</span>
+        </p>
+        <h2 id="internet-title">A World That Is Connected</h2>
+        <p class="duration">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+          </svg>
+          About 2 minutes
+        </p>
+      </header>
+
+      <div class="section__body section__body--split">
+        <div class="prose">
+          <p class="lead">
+            The Internet is a global network that connects computers and other devices around
+            the world so they can exchange data. That is all it is: a very large set of
+            connections between machines.
+          </p>
+
+          <p>
+            What changed is not really the list of services. What changed is the
+            <em>time and cost</em> of ordinary actions. Things that once took days now take
+            seconds, and things that once cost money are now free.
+          </p>
+        </div>
+
+        <figure class="figure">
+          <svg viewBox="0 0 560 380" role="img" xmlns="http://www.w3.org/2000/svg"
+               aria-label="Diagram of a central hub connected by lines to six smaller nodes, showing how devices link to one shared network.">
+            <rect width="560" height="380" rx="20" fill="#eef5fc"/>
+
+            <circle cx="280" cy="190" r="86" fill="none" stroke="#bcd6ef" stroke-width="1.5" stroke-dasharray="6 7"/>
+
+            <g stroke="#8fb8dd" stroke-width="2" stroke-linecap="round">
+              <line x1="280" y1="190" x2="108" y2="76"/>
+              <line x1="280" y1="190" x2="282" y2="58"/>
+              <line x1="280" y1="190" x2="458" y2="88"/>
+              <line x1="280" y1="190" x2="102" y2="298"/>
+              <line x1="280" y1="190" x2="276" y2="326"/>
+              <line x1="280" y1="190" x2="462" y2="292"/>
+            </g>
+
+            <g>
+              <circle cx="108" cy="76" r="17" fill="#ffffff" stroke="#0d9dbb" stroke-width="3"/>
+              <circle cx="282" cy="58" r="12" fill="#ffffff" stroke="#0f6fd1" stroke-width="3"/>
+              <circle cx="458" cy="88" r="19" fill="#ffffff" stroke="#0d9dbb" stroke-width="3"/>
+              <circle cx="102" cy="298" r="14" fill="#ffffff" stroke="#0f6fd1" stroke-width="3"/>
+              <circle cx="276" cy="326" r="18" fill="#ffffff" stroke="#0d9dbb" stroke-width="3"/>
+              <circle cx="462" cy="292" r="13" fill="#ffffff" stroke="#0f6fd1" stroke-width="3"/>
+            </g>
+
+            <circle cx="280" cy="190" r="42" fill="#0f6fd1"/>
+            <g fill="none" stroke="#cfe8fb" stroke-width="2.2">
+              <circle cx="280" cy="190" r="17"/>
+              <ellipse cx="280" cy="190" rx="7" ry="17"/>
+              <path d="M263 190h34"/>
+            </g>
+          </svg>
+          <figcaption>
+            The Internet is a network of networks: one shared set of connections that many
+            different devices can use.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div style="padding:0;">
+        <h3 style="max-width:var(--measure); margin-top:2.25rem; font-size:1.05rem; color:var(--accent-dark); letter-spacing:.02em;">
+          What changed in a normal day
+        </h3>
+
+        <div class="grid">
+          <div class="card">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-3.8-.8L3 21l1.9-4.9A8.4 8.4 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4z"/>
+              </svg>
+            </div>
+            <h3>Talking to people far away</h3>
+            <p>
+              A video call starts in seconds and costs nothing extra. Before, a letter took
+              days to arrive, and an international phone call was expensive.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/>
+                <path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H19v3H6.5"/>
+              </svg>
+            </div>
+            <h3>Learning</h3>
+            <p>
+              Lessons, textbooks, and videos are available at any hour, from any place with a
+              connection. Students can review a difficult topic as many times as they need.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="11" cy="11" r="7"/>
+                <path d="M20 20l-3.5-3.5"/>
+              </svg>
+            </div>
+            <h3>Finding information</h3>
+            <p>
+              A question that once needed a trip to the library can now be answered in a
+              minute — although the answer still has to be checked.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <rect x="3" y="7" width="18" height="13" rx="2"/>
+                <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+              </svg>
+            </div>
+            <h3>Working and earning</h3>
+            <p>
+              Many jobs can be done from home, and a small business can reach customers in
+              other cities or countries without opening an office there.
+            </p>
+          </div>
+        </div>
+
+        <div class="callout callout--note">
+          <p class="callout__label">A common misunderstanding</p>
+          <p class="callout__text">
+            The Internet is not the same thing as a computer. A computer can write a document,
+            edit a photo, or run a program with no connection at all. The Internet adds new
+            abilities to a computer — it does not switch the machine on.
+          </p>
+        </div>
+
+        <div class="callout">
+          <p class="callout__label">The other side</p>
+          <p class="callout__text">
+            The Internet is not automatically reliable. False information can spread very
+            quickly, companies collect large amounts of personal data, and it is easy to lose
+            an hour without noticing. Using the Internet well is a skill, not a guarantee.
+          </p>
+        </div>
+
+        <div class="prose">
+          <p style="max-width:var(--measure);">
+            So the Internet changed what people can do. But those abilities depend on the
+            machines we use to reach it — which brings us to the next section.
+          </p>
+
+          <div class="keypoints">
+            <p class="keypoints__title">Key points</p>
+            <ul>
+              <li>The Internet is a global network for exchanging data.</li>
+              <li>It made communication, learning, and research faster and cheaper.</li>
+              <li>It has real problems: misinformation, privacy, and lost time.</li>
+              <li>A computer works offline; the Internet adds extra abilities.</li>
+            </ul>
+          </div>
+
+          <details class="script">
+            <summary>
+              <span class="script__marker" aria-hidden="true"></span>
+              <span>Speaking script</span>
+              <span class="script__meta">≈ 245 words · ~2 min</span>
+            </summary>
+            <div class="script__body">
+              <p>
+                Let's start with the Internet. The Internet is a global network. It connects
+                computers and other devices around the world so they can send and receive data.
+                That is really all it is: a very large set of connections.
+              </p>
+              <p>
+                Think about how you used the Internet today. Maybe you sent a message to a
+                friend. Maybe you watched a video lesson. Maybe you searched for the answer to
+                a question you could not answer yourself.
+              </p>
+              <p>
+                Before the Internet, these things were possible, but they were slower and more
+                expensive. To talk to a relative in another country, you waited for a letter,
+                or you paid for an international phone call. To find information, you went to
+                a library and hoped the right book was there.
+              </p>
+              <p>
+                Today, a video call is free and takes ten seconds to start. A question can be
+                answered in a minute. A student in a small town can study with the same online
+                materials as a student in a big city.
+              </p>
+              <p>
+                But the Internet is not perfect. Not everything online is true, and false
+                information can travel very fast. Companies collect a lot of data, so privacy
+                matters. And it is easy to lose an hour without noticing.
+              </p>
+              <p>
+                One more important point. The Internet is not the same thing as a computer. A
+                computer can do many useful things offline. The Internet simply adds new
+                abilities to it. And those abilities depend on the devices we use — which
+                brings me to my next topic.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — COMPUTERS AND SMART DEVICES -->
+  <section class="section" id="devices" data-title="Computers and Smart Devices" aria-labelledby="devices-title">
+    <div class="container">
+      <header class="section__head">
+        <p class="eyebrow">
+          <span class="eyebrow__num">03</span> Computing Devices
+          <span class="now-badge">Now presenting</span>
+        </p>
+        <h2 id="devices-title">Computers and Smart Devices</h2>
+        <p class="duration">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+          </svg>
+          About 2 minutes
+        </p>
+      </header>
+
+      <div class="section__body">
+        <div class="prose">
+          <p class="lead">
+            Computers and smart devices are the machines we use to work with digital
+            information. They do not all look the same, because they are designed for
+            different situations.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <rect x="2" y="4" width="20" height="13" rx="2"/>
+              <path d="M8 21h8M12 17v4"/>
+            </svg>
+          </div>
+          <h3>Desktop computers</h3>
+          <p>
+            They stay in one place, usually with a large screen and a full keyboard. That
+            makes them a good choice for office work, programming, design, and gaming — tasks
+            that are easier with more space and more power.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <rect x="3" y="5" width="18" height="11" rx="2"/>
+              <path d="M2 19h20"/>
+            </svg>
+          </div>
+          <h3>Laptops</h3>
+          <p>
+            A laptop does similar work but can be carried. Students take laptops to class and
+            to the library. The advantage is not speed — it is being able to work wherever
+            you are.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <rect x="7" y="2" width="10" height="20" rx="2.5"/>
+              <path d="M11 18.5h2"/>
+            </svg>
+          </div>
+          <h3>Smartphones</h3>
+          <p>
+            This is the device most people use the most. A smartphone is a phone, but it is
+            also a camera, a map, a notebook, a library, and a payment card. It fits in a
+            pocket, and it made digital life personal and portable.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <rect x="3" y="3" width="18" height="7" rx="2"/>
+              <rect x="3" y="14" width="18" height="7" rx="2"/>
+              <path d="M7 6.5h.01M7 17.5h.01"/>
+            </svg>
+          </div>
+          <h3>Supercomputers</h3>
+          <p>
+            Extremely powerful machines used by scientists and research centres for very
+            heavy calculations, such as climate research and weather forecasting. Almost
+            nobody uses one directly — their value reaches us through better forecasts and a
+            better understanding of the world.
+          </p>
+        </div>
+      </div>
+
+      <div style="padding:0;">
+        <div class="callout callout--note">
+          <p class="callout__label">How they differ</p>
+          <p class="callout__text">
+            Desktops, laptops, and smartphones are different mainly in <strong>shape and
+            use</strong>. Supercomputers are different in <strong>computing power and
+            purpose</strong>. A supercomputer is not simply a very fast personal computer, and
+            it is not something people use at home.
+          </p>
+        </div>
+
+        <div class="callout">
+          <p class="callout__label">One everyday example: planning a trip</p>
+          <p class="callout__text">
+            <strong>Then:</strong> paper maps, printed timetables, and asking strangers for
+            directions.<br>
+            <strong>Now:</strong> a phone shows your position, the fastest route, and the next
+            bus in a few seconds.
+          </p>
+          <p class="callout__text">
+            A task that used to take about fifteen minutes now takes less than one.
+          </p>
+        </div>
+
+        <div class="prose">
+          <p style="max-width:var(--measure);">
+            These devices made digital life convenient and personal. Then a newer technology
+            started to do some of the thinking as well.
+          </p>
+
+          <div class="keypoints">
+            <p class="keypoints__title">Key points</p>
+            <ul>
+              <li>Desktops stay in one place; laptops travel with you.</li>
+              <li>Smartphones put many tools into one pocket-sized device.</li>
+              <li>Supercomputers serve science, not personal use.</li>
+              <li>Devices are different mainly in shape, power, and purpose.</li>
+            </ul>
+          </div>
+
+          <details class="script">
+            <summary>
+              <span class="script__marker" aria-hidden="true"></span>
+              <span>Speaking script</span>
+              <span class="script__meta">≈ 238 words · ~2 min</span>
+            </summary>
+            <div class="script__body">
+              <p>
+                Computers and smart devices are the machines that let us use digital
+                information. They come in different shapes, and each shape fits different
+                needs.
+              </p>
+              <p>
+                A desktop computer stays in one place. It is useful for office work,
+                programming, design, and gaming — tasks that are easier with a large screen and
+                a full keyboard.
+              </p>
+              <p>
+                A laptop does the same kind of work, but you can carry it. Students take
+                laptops to class and to the library.
+              </p>
+              <p>
+                A smartphone is the device most of us use the most. It is a phone, but it is
+                also a camera, a map, a notebook, a library, and a payment card. It fits in
+                your pocket.
+              </p>
+              <p>
+                And then there are supercomputers. These are not personal computers. They are
+                extremely powerful machines used by scientists and research centres for very
+                heavy calculations — for example, climate research and weather forecasting.
+                You will probably never use one directly, but you benefit from the results:
+                better forecasts and a better understanding of our planet.
+              </p>
+              <p>
+                Let me give one small, real example. Ten years ago, planning a trip meant paper
+                maps, printed timetables, and asking people for directions. Today, a smartphone
+                shows your position, the fastest route, and the next bus in a few seconds. A
+                task that took fifteen minutes now takes less than one.
+              </p>
+              <p>
+                These devices made digital life convenient. Then a newer technology started to
+                do some of the thinking as well: artificial intelligence.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — ARTIFICIAL INTELLIGENCE -->
+  <section class="section section--tint" id="ai" data-title="Artificial Intelligence" aria-labelledby="ai-title">
+    <div class="container">
+      <header class="section__head">
+        <p class="eyebrow">
+          <span class="eyebrow__num">04</span> Artificial Intelligence
+          <span class="now-badge">Now presenting</span>
+        </p>
+        <h2 id="ai-title">Artificial Intelligence in Everyday Life</h2>
+        <p class="duration">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+          </svg>
+          About 2 minutes
+        </p>
+      </header>
+
+      <div class="section__body section__body--split">
+        <div class="prose">
+          <p class="lead">
+            Artificial intelligence (AI) is the area of computer science that builds systems
+            able to do tasks we normally connect with human thinking: recognising patterns,
+            understanding language, and making useful suggestions.
+          </p>
+
+          <p>
+            You already meet AI every day, usually without calling it that. When a video app
+            suggests what to watch next, when your phone turns your speech into text, or when
+            a translation tool changes a paragraph into another language — that is AI at work.
+          </p>
+        </div>
+
+        <figure class="figure">
+          <svg viewBox="0 0 560 380" role="img" xmlns="http://www.w3.org/2000/svg"
+               aria-label="Illustration of a small neural network of connected nodes beside a speech bubble, representing an AI assistant.">
+            <rect width="560" height="380" rx="20" fill="#eef5fc"/>
+
+            <g stroke="#8fb8dd" stroke-width="1.8" stroke-linecap="round" opacity=".85">
+              <line x1="120" y1="100" x2="255" y2="150"/>
+              <line x1="120" y1="190" x2="255" y2="150"/>
+              <line x1="120" y1="280" x2="255" y2="230"/>
+              <line x1="120" y1="190" x2="255" y2="230"/>
+              <line x1="255" y1="150" x2="395" y2="120"/>
+              <line x1="255" y1="150" x2="395" y2="250"/>
+              <line x1="255" y1="230" x2="395" y2="250"/>
+              <line x1="255" y1="230" x2="395" y2="120"/>
+              <line x1="395" y1="120" x2="500" y2="185"/>
+              <line x1="395" y1="250" x2="500" y2="185"/>
+            </g>
+
+            <g>
+              <circle cx="120" cy="100" r="13" fill="#ffffff" stroke="#0f6fd1" stroke-width="3"/>
+              <circle cx="120" cy="190" r="13" fill="#ffffff" stroke="#0f6fd1" stroke-width="3"/>
+              <circle cx="120" cy="280" r="13" fill="#ffffff" stroke="#0f6fd1" stroke-width="3"/>
+
+              <circle cx="255" cy="150" r="16" fill="#0f6fd1"/>
+              <circle cx="255" cy="230" r="16" fill="#0d9dbb"/>
+
+              <circle cx="395" cy="120" r="13" fill="#ffffff" stroke="#0d9dbb" stroke-width="3"/>
+              <circle cx="395" cy="250" r="13" fill="#ffffff" stroke="#0d9dbb" stroke-width="3"/>
+
+              <circle cx="500" cy="185" r="18" fill="#ffffff" stroke="#0f6fd1" stroke-width="3"/>
+            </g>
+
+            <g transform="translate(300 300)">
+              <rect x="-96" y="-34" width="192" height="68" rx="18" fill="#0a1e33"/>
+              <path d="M-46 34 L-24 34 L-40 52 Z" fill="#0a1e33"/>
+              <circle cx="-42" cy="0" r="7" fill="#7dd3fc"/>
+              <circle cx="0" cy="0" r="7" fill="#7dd3fc" opacity=".75"/>
+              <circle cx="42" cy="0" r="7" fill="#7dd3fc" opacity=".5"/>
+            </g>
+          </svg>
+          <figcaption>
+            AI systems find patterns in data. A chat assistant is one familiar example of
+            this idea in daily use.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div style="padding:0;">
+        <h3 style="max-width:var(--measure); margin-top:2.25rem; font-size:1.05rem; color:var(--accent-dark); letter-spacing:.02em;">
+          Where students meet AI
+        </h3>
+
+        <div class="grid">
+          <div class="card">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-3.8-.8L3 21l1.9-4.9A8.4 8.4 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4z"/>
+              </svg>
+            </div>
+            <h3>Assistants and chat tools</h3>
+            <p>
+              You can ask a question in normal language and get an answer in seconds. They are
+              useful for explaining an idea, planning a task, or finding a starting point.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M12 4 2 9l10 5 10-5z"/>
+                <path d="M6 11.5V17c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.5"/>
+              </svg>
+            </div>
+            <h3>Language learning</h3>
+            <p>
+              You can practise a conversation, check your grammar, or ask for a difficult idea
+              to be explained in simpler words — as many times as you need.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M4 5h8M8 3v2c0 4-2 7-5 8"/>
+                <path d="M6 9c1 2.6 3 4.4 6 5"/>
+                <path d="M13 21l4-10 4 10M14.6 17h4.8"/>
+              </svg>
+            </div>
+            <h3>Translation and speech</h3>
+            <p>
+              Speech becomes text, and text becomes another language. This helps people read
+              foreign material and communicate across language barriers.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/>
+                <circle cx="12" cy="12" r="3.5"/>
+              </svg>
+            </div>
+            <h3>Recommendations</h3>
+            <p>
+              Video, music, and shopping services use AI to suggest what you might like next,
+              based on what you and similar users have chosen before.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M4 20l5-1.5 9.5-9.5a2.1 2.1 0 0 0-3-3L6 15.5z"/>
+                <path d="M14.5 6.5l3 3"/>
+              </svg>
+            </div>
+            <h3>Writing and creativity</h3>
+            <p>
+              AI can suggest ideas when you are stuck, help you plan a project, or show you a
+              different way to organise a text. The final decisions stay with you.
+            </p>
+          </div>
+        </div>
+
+        <div class="callout callout--note">
+          <p class="callout__label">AI has real limits</p>
+          <p class="callout__text">
+            An AI system can give wrong information in a confident voice. It can misunderstand
+            the context of your question. Sometimes it produces an answer that sounds correct
+            but is not.
+          </p>
+          <p class="callout__text">
+            <strong>Simple rule:</strong> check important information in a reliable source,
+            and never send a text you have not read yourself.
+          </p>
+        </div>
+
+        <div class="prose">
+          <p style="max-width:var(--measure);">
+            AI is not a person. It does not know everything, and it will not replace every
+            skill. It is a tool — a powerful one — and its value depends on how carefully we
+            use it.
+          </p>
+
+          <div class="keypoints">
+            <p class="keypoints__title">Key points</p>
+            <ul>
+              <li>AI finds patterns in data and works with language.</li>
+              <li>It supports learning, translation, recommendations, and writing.</li>
+              <li>It can be confidently wrong and can miss context.</li>
+              <li>AI assists people; it does not replace their judgement.</li>
+            </ul>
+          </div>
+
+          <details class="script">
+            <summary>
+              <span class="script__marker" aria-hidden="true"></span>
+              <span>Speaking script</span>
+              <span class="script__meta">≈ 239 words · ~2 min</span>
+            </summary>
+            <div class="script__body">
+              <p>
+                Artificial intelligence, or AI, is the part of computer science that builds
+                systems able to do tasks we normally connect with human thinking: recognising
+                patterns, understanding language, and making useful suggestions.
+              </p>
+              <p>
+                You already meet AI every day. When a video app suggests what to watch next,
+                that is AI. When your phone turns your speech into text, that is AI. When a
+                translation tool changes a paragraph from English into another language, that
+                is AI too.
+              </p>
+              <p>
+                For students, AI can be a study partner. You can ask a tool to explain a
+                difficult idea in simpler words, to check your grammar, or to give you practice
+                questions. Instead of waiting until the next lesson, you can get an answer
+                immediately and keep learning at your own speed.
+              </p>
+              <p>
+                AI can also help with creative work. It can suggest ideas when you are stuck,
+                help you plan a project, or show you a different way to organise your writing.
+              </p>
+              <p>
+                But AI has real limits. It can give wrong information in a confident voice. It
+                can misunderstand your question. Sometimes it produces an answer that sounds
+                correct but is not. So the rule is simple: check important information in a
+                reliable source, and never send a text you have not read.
+              </p>
+              <p>
+                AI is not a person. It does not know everything, and it will not replace every
+                skill. It is a tool — a powerful one — and its value depends on how carefully
+                we use it.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — CONCLUSION -->
+  <section class="section" id="conclusion" data-title="Conclusion" aria-labelledby="conclusion-title">
+    <div class="container">
+      <header class="section__head">
+        <p class="eyebrow">
+          <span class="eyebrow__num">05</span> Conclusion
+          <span class="now-badge">Now presenting</span>
+        </p>
+        <h2 id="conclusion-title">Three Changes, One Question</h2>
+        <p class="duration">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+          </svg>
+          About 1 minute
+        </p>
+      </header>
+
+      <div class="summary-grid">
+        <div class="summary-card">
+          <h3>The Internet connected the world</h3>
+          <p>Communication became faster, and information became much easier to reach.</p>
+        </div>
+        <div class="summary-card">
+          <h3>Devices made it personal</h3>
+          <p>A library, a camera, a map, and an office now fit into a pocket.</p>
+        </div>
+        <div class="summary-card">
+          <h3>AI adds assistance</h3>
+          <p>New ways to learn, create, and decide — useful, but not always correct.</p>
+        </div>
+      </div>
+
+      <div class="prose">
+        <div class="closing-quote">
+          <p>
+            None of these technologies is good or bad by itself. They make life easier and
+            open new opportunities, but the result depends on how responsibly and thoughtfully
+            we use them.
+          </p>
+        </div>
+
+        <p style="max-width:var(--measure);">
+          Thank you for reading — and for listening. If you have a question about any part of
+          this topic, the presenter will be happy to answer it.
+        </p>
+
+        <div class="keypoints">
+          <p class="keypoints__title">Key points</p>
+          <ul>
+            <li>The Internet expanded communication and access to information.</li>
+            <li>Devices made digital tasks widely accessible.</li>
+            <li>AI introduced new ways to learn and work.</li>
+            <li>Value depends on how thoughtfully we use technology.</li>
+          </ul>
+        </div>
+
+        <details class="script">
+          <summary>
+            <span class="script__marker" aria-hidden="true"></span>
+            <span>Speaking script</span>
+            <span class="script__meta">≈ 97 words · ~1 min</span>
+          </summary>
+          <div class="script__body">
+            <p>
+              So, let me bring the three ideas together.
+            </p>
+            <p>
+              The Internet connected the world. It made communication faster and information
+              easier to reach. Computers and smart devices made that connection personal and
+              portable — a whole library, camera, and office in your pocket. And artificial
+              intelligence is starting to help us understand, create, and decide.
+            </p>
+            <p>
+              None of these technologies is good or bad by itself. They make life easier and
+              open new opportunities, but the result depends on how responsibly and
+              thoughtfully we use them.
+            </p>
+            <p>
+              Thank you for listening. I am happy to answer any questions.
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <p class="site-footer__title">How Technology Has Changed Our Daily Lives</p>
+      <p>
+        An educational article and presentation guide created for an English class.
+        Written for readers at approximately B1 level.
+      </p>
+      <p>
+        All text and illustrations on this page are original. No tracking, no cookies,
+        no external requests.
+      </p>
+    </div>
+    <div>
+      <p>
+        <span class="credit">Designed and developed by NEON</span>
+      </p>
+      <p>
+        Edit the attribution line in <code>index.html</code> if the presenter’s name should
+        appear here instead.
+      </p>
+      <p>
+        Version 2 · Static HTML, CSS, and JavaScript. Ready for GitHub Pages.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- =========================================================
+     PRESENTATION CONTROL BAR
+     ========================================================= -->
+<div class="present-bar" id="presentBar" hidden role="region" aria-label="Presentation controls">
+  <div class="present-bar__inner">
+    <div class="present-bar__nav">
+      <button type="button" class="btn" id="prevSection" aria-label="Previous section" disabled>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M15 5l-7 7 7 7"/>
+        </svg>
+        <span class="present-bar__btn-text">Previous</span>
+      </button>
+    </div>
+
+    <p class="present-bar__status">
+      <span class="present-bar__count" id="sectionCount" aria-live="polite">Section 1 of 5</span>
+      <span class="present-bar__name" id="sectionName">Introduction</span>
+      <span class="present-bar__hint">
+        <kbd>N</kbd>/<kbd>P</kbd> next &amp; previous · <kbd>Home</kbd>/<kbd>End</kbd> jump · <kbd>Esc</kbd> exit
+      </span>
+      <span class="present-dots" id="presentDots" role="tablist" aria-label="Jump to section"></span>
+    </p>
+
+    <div class="present-bar__nav">
+      <button type="button" class="btn present-bar__icon-btn" id="fullscreenToggle" aria-pressed="false" aria-label="Enter fullscreen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>
+        </svg>
+      </button>
+
+      <button type="button" class="btn" id="nextSection" aria-label="Next section">
+        <span class="present-bar__btn-text">Next</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------------------------------------------------------
+     Shared helpers
+     --------------------------------------------------------- */
+  var motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  function prefersReducedMotion() {
+    return motionQuery.matches;
+  }
+
+  function scrollBehavior() {
+    return prefersReducedMotion() ? 'auto' : 'smooth';
+  }
+
+  /**
+   * Scroll so that `section` is fully reachable.
+   *
+   * Why not scrollIntoView?
+   *   - scroll-padding does not always account for a fixed bottom bar
+   *     when the section is short and the document cannot scroll further.
+   *   - Manual calculation lets us subtract the real header height and
+   *     the real bottom-bar height, then clamp to the maximum scroll.
+   */
+  function scrollToSection(section) {
+    if (!section) { return; }
+
+    var header = document.querySelector('.site-header');
+    var headerH = header ? header.getBoundingClientRect().height : 0;
+
+    var barH = 0;
+    if (isPresenting && presentBar && !presentBar.hidden) {
+      barH = presentBar.getBoundingClientRect().height;
+    }
+
+    var rect = section.getBoundingClientRect();
+    var currentY = window.scrollY || window.pageYOffset ||
+                   document.documentElement.scrollTop || 0;
+    var absoluteTop = currentY + rect.top;
+
+    var paddingTop = headerH + 16;      /* breathing room under the sticky header */
+    var paddingBottom = barH + 16;      /* breathing room above the bottom bar */
+
+    var availableH = window.innerHeight - paddingTop - paddingBottom;
+    var sectionH = rect.height;
+
+    var targetY;
+    if (sectionH <= availableH && availableH > 0) {
+      /* Short section: place its top just below the header. */
+      targetY = absoluteTop - paddingTop;
+    } else {
+      /* Tall section: top-align below the header; the user will scroll. */
+      targetY = absoluteTop - paddingTop;
+    }
+
+    var maxY = Math.max(
+      0,
+      (document.documentElement.scrollHeight || document.body.scrollHeight) -
+        window.innerHeight
+    );
+    if (targetY > maxY) { targetY = maxY; }
+    if (targetY < 0) { targetY = 0; }
+
+    window.scrollTo({
+      top: targetY,
+      left: 0,
+      behavior: scrollBehavior()
+    });
+  }
+
+  /* ---------------------------------------------------------
+     1. Reading progress indicator
+     --------------------------------------------------------- */
+  var progressBar = document.getElementById('progressBar');
+
+  if (progressBar) {
+    var progressQueued = false;
+
+    var renderProgress = function () {
+      var doc = document.documentElement;
+      var scrollable = doc.scrollHeight - doc.clientHeight;
+      var ratio = scrollable > 0
+        ? (window.scrollY || doc.scrollTop) / scrollable
+        : 0;
+      ratio = Math.max(0, Math.min(1, ratio));
+      progressBar.style.transform = 'scaleX(' + ratio + ')';
+      progressQueued = false;
+    };
+
+    var requestProgress = function () {
+      if (progressQueued) { return; }
+      progressQueued = true;
+      window.requestAnimationFrame(renderProgress);
+    };
+
+    window.addEventListener('scroll', requestProgress, { passive: true });
+    window.addEventListener('resize', requestProgress);
+    renderProgress();
+  }
+
+  /* ---------------------------------------------------------
+     2. Collect sections and build navigation model
+     --------------------------------------------------------- */
+  var sectionList = Array.prototype.slice.call(
+    document.querySelectorAll('main .section[id]')
+  );
+  var navLinks = Array.prototype.slice.call(
+    document.querySelectorAll('.site-nav a[href^="#"]')
+  );
+
+  var prevButton   = document.getElementById('prevSection');
+  var nextButton   = document.getElementById('nextSection');
+  var sectionCount = document.getElementById('sectionCount');
+  var sectionName  = document.getElementById('sectionName');
+  var presentDots  = document.getElementById('presentDots');
+  var presentBar   = document.getElementById('presentBar');
+  var fsToggle     = document.getElementById('fullscreenToggle');
+
+  var currentIndex = 0;
+
+  if (presentDots && sectionList.length) {
+    sectionList.forEach(function (section, i) {
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'present-dots__dot';
+      dot.setAttribute('role', 'tab');
+      dot.setAttribute('aria-label',
+        'Go to section ' + (i + 1) + ': ' +
+        (section.getAttribute('data-title') || section.id));
+      dot.addEventListener('click', function () {
+        goToSection(i);
+      });
+      presentDots.appendChild(dot);
+    });
+  }
+
+  function setActiveSection(index) {
+    if (!sectionList.length) { return; }
+    index = Math.max(0, Math.min(sectionList.length - 1, index));
+    currentIndex = index;
+
+    var activeId = sectionList[index].id;
+
+    navLinks.forEach(function (link) {
+      var isActive = link.getAttribute('href') === '#' + activeId;
+      link.classList.toggle('is-active', isActive);
+      if (isActive) {
+        link.setAttribute('aria-current', 'true');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+
+    sectionList.forEach(function (section, i) {
+      section.classList.toggle('is-current', i === index);
+    });
+
+    if (presentDots) {
+      var dots = presentDots.querySelectorAll('.present-dots__dot');
+      Array.prototype.forEach.call(dots, function (dot, i) {
+        dot.classList.toggle('is-active', i === index);
+        dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
+      });
+    }
+
+    if (sectionCount) {
+      sectionCount.textContent = 'Section ' + (index + 1) + ' of ' + sectionList.length;
+    }
+    if (sectionName) {
+      sectionName.textContent = sectionList[index].getAttribute('data-title') || '';
+    }
+    if (prevButton) { prevButton.disabled = (index === 0); }
+    if (nextButton) { nextButton.disabled = (index === sectionList.length - 1); }
+  }
+
+  function goToSection(index) {
+    if (!sectionList.length) { return; }
+    var target = Math.max(0, Math.min(sectionList.length - 1, index));
+    setActiveSection(target);
+    scrollToSection(sectionList[target]);
+  }
+
+  /* Highlight the section currently in view */
+  if ('IntersectionObserver' in window && sectionList.length) {
+    var sectionObserver = new IntersectionObserver(function (entries) {
+      var visible = entries.filter(function (entry) {
+        return entry.isIntersecting;
+      });
+      if (!visible.length) { return; }
+      visible.sort(function (a, b) {
+        return a.boundingClientRect.top - b.boundingClientRect.top;
+      });
+      var index = sectionList.indexOf(visible[0].target);
+      if (index !== -1) { setActiveSection(index); }
+    }, {
+      rootMargin: '-25% 0px -60% 0px',
+      threshold: 0
+    });
+
+    sectionList.forEach(function (section) {
+      sectionObserver.observe(section);
+    });
+  }
+
+  setActiveSection(0);
+
+  /* ---------------------------------------------------------
+     3. Presentation mode
+     --------------------------------------------------------- */
+  var presentToggles = Array.prototype.slice.call(
+    document.querySelectorAll('[data-present-toggle]')
+  );
+  var isPresenting = false;
+
+  function setPresentationMode(enabled) {
+    isPresenting = enabled;
+
+    /* Toggle on both <html> (for scroll-padding-bottom) and <body>
+       (for typography / padding changes). */
+    document.documentElement.classList.toggle('is-presenting', enabled);
+    document.body.classList.toggle('is-presenting', enabled);
+
+    presentToggles.forEach(function (button) {
+      button.setAttribute('aria-pressed', String(enabled));
+      var label = button.querySelector('.present-btn__label');
+      if (label) {
+        label.textContent = enabled
+          ? 'Exit presentation mode'
+          : 'Presentation mode';
+      }
+    });
+
+    if (presentBar) { presentBar.hidden = !enabled; }
+
+    if (enabled) {
+      setActiveSection(currentIndex);
+      /* Always scroll to the current section — on every screen size,
+         so the presenter starts at the top of the slide even on mobile. */
+      scrollToSection(sectionList[currentIndex]);
+    } else {
+      exitFullscreenIfActive();
+    }
+  }
+
+  presentToggles.forEach(function (button) {
+    button.addEventListener('click', function () {
+      setPresentationMode(!isPresenting);
+    });
+  });
+
+  if (prevButton) {
+    prevButton.addEventListener('click', function () {
+      goToSection(currentIndex - 1);
+    });
+  }
+  if (nextButton) {
+    nextButton.addEventListener('click', function () {
+      goToSection(currentIndex + 1);
+    });
+  }
+
+  /* ---------------------------------------------------------
+     4. Optional fullscreen enhancement
+     --------------------------------------------------------- */
+  function fullscreenElement() {
+    return document.fullscreenElement ||
+           document.webkitFullscreenElement ||
+           null;
+  }
+
+  function requestFullscreen() {
+    var el = document.documentElement;
+    var fn = el.requestFullscreen || el.webkitRequestFullscreen;
+    if (typeof fn !== 'function') { return Promise.reject(); }
+    try {
+      var result = fn.call(el);
+      return (result && typeof result.then === 'function')
+        ? result
+        : Promise.resolve();
+    } catch (err) {
+      return Promise.reject(err);
+    }
+  }
+
+  function exitFullscreen() {
+    var fn = document.exitFullscreen || document.webkitExitFullscreen;
+    if (typeof fn !== 'function') { return Promise.resolve(); }
+    try {
+      var result = fn.call(document);
+      return (result && typeof result.then === 'function')
+        ? result
+        : Promise.resolve();
+    } catch (err) {
+      return Promise.reject(err);
+    }
+  }
+
+  function exitFullscreenIfActive() {
+    if (fullscreenElement()) {
+      exitFullscreen().catch(function () { /* ignore */ });
+    }
+  }
+
+  function updateFullscreenButton() {
+    if (!fsToggle) { return; }
+    var active = !!fullscreenElement();
+    fsToggle.setAttribute('aria-pressed', active ? 'true' : 'false');
+    fsToggle.setAttribute('aria-label', active ? 'Exit fullscreen' : 'Enter fullscreen');
+  }
+
+  if (fsToggle) {
+    fsToggle.addEventListener('click', function () {
+      if (fullscreenElement()) {
+        exitFullscreen().catch(function () { /* ignore */ });
+      } else {
+        requestFullscreen().catch(function () { /* ignore */ });
+      }
+    });
+
+    ['fullscreenchange', 'webkitfullscreenchange'].forEach(function (evt) {
+      document.addEventListener(evt, updateFullscreenButton);
+    });
+    updateFullscreenButton();
+  }
+
+  /* ---------------------------------------------------------
+     5. Keyboard support inside presentation mode
+     --------------------------------------------------------- */
+  function isTypingTarget(target) {
+    if (!target || !target.tagName) { return false; }
+    var tag = target.tagName.toLowerCase();
+    return tag === 'input' || tag === 'textarea' || tag === 'select' ||
+           target.isContentEditable;
+  }
+
+  document.addEventListener('keydown', function (event) {
+    if (!isPresenting) { return; }
+    if (isTypingTarget(event.target)) { return; }
+
+    if (event.key === 'Escape') {
+      if (fullscreenElement() && !event.shiftKey) {
+        return; /* browser handles exiting fullscreen */
+      }
+      event.preventDefault();
+      setPresentationMode(false);
+      if (presentToggles[0]) { presentToggles[0].focus(); }
+      return;
+    }
+
+    var key = event.key ? event.key.toLowerCase() : '';
+
+    var wantsNext = (key === 'n') ||
+                    (event.altKey && event.key === 'ArrowRight') ||
+                    (event.key === 'PageDown');
+    var wantsPrev = (key === 'p') ||
+                    (event.altKey && event.key === 'ArrowLeft') ||
+                    (event.key === 'PageUp');
+
+    if (wantsNext) {
+      event.preventDefault();
+      goToSection(currentIndex + 1);
+    } else if (wantsPrev) {
+      event.preventDefault();
+      goToSection(currentIndex - 1);
+    } else if (event.key === 'Home') {
+      event.preventDefault();
+      goToSection(0);
+    } else if (event.key === 'End') {
+      event.preventDefault();
+      goToSection(sectionList.length - 1);
+    }
+  }, false);
+
+  /* ---------------------------------------------------------
+     6. Re-align after layout changes
+        (fonts loading, images loading, resize, orientation)
+        Keep this cheap: only re-align while presenting.
+     --------------------------------------------------------- */
+  var realignQueued = false;
+  function queueRealign() {
+    if (!isPresenting) { return; }
+    if (realignQueued) { return; }
+    realignQueued = true;
+    window.requestAnimationFrame(function () {
+      realignQueued = false;
+      /* Re-measure header / bar heights and re-scroll to the current
+         section so a resize does not leave it clipped. */
+      scrollToSection(sectionList[currentIndex]);
+    });
+  }
+
+  window.addEventListener('resize', queueRealign, { passive: true });
+  window.addEventListener('orientationchange', queueRealign, { passive: true });
+
+  /* When fonts finish loading, section heights can change; re-align. */
+  if (document.fonts && typeof document.fonts.ready === 'object' &&
+      typeof document.fonts.ready.then === 'function') {
+    document.fonts.ready.then(function () {
+      if (isPresenting) { queueRealign(); }
+    });
+  }
+
+})();
+</script>
+</body>
+</html>
